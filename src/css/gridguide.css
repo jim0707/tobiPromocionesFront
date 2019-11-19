@@ -1,0 +1,60 @@
+.lq-gridview {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999999;
+  pointer-events: none;
+  display: block;
+}
+
+.lq-gridview .lq-gridview__content {
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.lq-gridview .lq-gridview__column {
+  height: 100%;
+  float: left;
+  /* width: 6.6666667%; */
+  width: 3.4482758621%;
+}
+
+.lq-gridview .lq-gridview__column:nth-child(odd) {
+  background-color: rgba(236, 0, 140, 0.05);
+}
+
+@media (max-width: 767px) {
+  .lq-gridview .lq-gridview__column:nth-child(n+16) {
+    /* display: none; */
+  }
+}
+@media (min-width: 768px) {
+  .lq-gridview .lq-gridview__column {
+    /* width: 3.22580645%; */
+    /* width: 3.4482758621%; */
+  }
+}
+@media only screen and (min-width: 426px) {  
+  .lq-gridview .lq-gridview__content {
+    width:85%;
+  }
+  .lq-gridview .lq-gridview__column {
+    width: 3.22580645%;
+    /* width: 3.4482758621%; */
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .lq-gridview .lq-gridview__content {
+    margin: 0 auto;
+    max-width: 1240px;
+    width:100%;
+  }
+  .lq-gridview .lq-gridview__column {
+    width: 3.22580645%;
+    /* width: 3.4482758621%; */
+  }
+}

@@ -1,0 +1,63 @@
+$columns : 31;
+$column-width : 100%/$columns;
+$breakpoints : (s : 0, m : 426px, l : 769px );
+
+@function column-width($column){
+    @return $column-width*$column;
+}
+@function get-column-width($col, $total) {
+    @return (100% / $total) * $col;
+  }
+.container {
+    margin: 0 auto;
+    max-width: 1240px;
+    width: 90%;
+    // width:column-width(29)
+}
+  
+@media only screen and (min-width: 426px) {
+    .container {
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .container {
+        width:column-width(31);
+    }
+}
+
+.row {
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row .col {
+    float: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 1px;
+}
+
+
+@mixin column($screen, $min-width){
+    @media (min-width:$min-width){
+        @for $i from 1 through $columns {
+            .row .col.#{$screen}#{$i} {
+                width: column-width($i);
+                margin-left: auto;
+                left: auto;
+                right: auto;
+            }
+        }
+    }
+}
+@each $name, $width in $breakpoints {
+    @include column($name, $width);
+}

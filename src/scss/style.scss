@@ -1,0 +1,311 @@
+@import 'generic';
+@import 'grid';
+@import 'alert';
+@import 'preloader';
+header {
+    background: #ed1c24;
+    height: 60px;
+    position: relative;
+    img {
+        position: absolute;
+        top: calc(30px - 12.5px);
+    }
+}
+#pageForm {    
+    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+        background: #ff4e55;
+    }
+    .product {        
+        height: 160px;
+        &__img {
+            background: url('../img/260319-banner-promo-mb.png') no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 105px;
+            padding: 0 16px;
+            margin: 0 -16px;
+        }
+        &__name {
+            padding-top: 140px;
+        }
+    }
+    .benefits {
+        background: #fafafa;
+        padding: 20px;
+        margin-bottom: 10px;
+        &__title {
+            font-size: 12px;            
+            margin-bottom: 5px;
+        }
+        &__item {
+            h4 {
+                margin-top: 0;
+                font-size: 20px;
+                font-weight: 900;
+            }
+        }
+        .owl-theme .owl-nav {
+            position: relative;
+        }
+        .owl-theme .owl-nav [class*=owl-]{
+            position: absolute;
+            right: 0;
+            top: -2px;
+        }
+        .owl-theme .owl-nav .owl-prev{
+            right: 50px;
+            background: url('../img/icons/chevron.png') no-repeat;
+            color: transparent;
+            height: 20px;
+        }
+        .owl-theme .owl-nav .owl-next{
+            background: url('../img/icons/chevron-left.png') no-repeat;
+            color: transparent;
+        }
+
+    }
+    .form {
+        &__title {
+            margin: 0 0 12px;
+            font-size: 21px;
+            font-weight: 900;
+        }
+        &__subtext {
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        .combo {
+            margin-right: column-width(2);
+        }
+        .checkbox {
+            margin: 14px 0 41px 0;
+            label {
+                padding-left: 7px;
+                font-size: 14px;
+            }
+            a {
+                color: #81bb00;
+                cursor: pointer;
+            }
+        }
+        .note{
+            color: #808188;
+            margin: 35px 0;
+        }
+    }
+}
+#confirmation {
+    .left-content .success {
+        margin-top: 0;
+    }
+    .left-content .no-success {
+        margin-top: 40px;
+    }
+    p {
+        color: #808188;
+        text-align: justify;
+    }
+    .confirmation {
+        max-width: 360px;
+        &__img {
+            background: url('https://s3.us-east-2.amazonaws.com/ue1stgas3pases001/Test/Innovacion/campains/mconfirmation-img.png') no-repeat;
+            background-size: cover;
+            height: 180px;
+            margin: 0 -16px 28px -16px ;
+        }
+        &__name {
+            font-size: 12px;
+            font-weight: 900;
+        }
+        &__copy {
+            font-size: 24px;
+            font-weight: 900;
+            margin: 12px 0 3px;
+        }
+        &__code {
+            margin: 20px 0 0;
+            p {
+                margin-bottom: 10px;
+            }
+            h4 {                
+                background-color: #ededef;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                font-size: 17px;
+                font-weight: 600;
+            }
+        }
+        &__document {
+            margin-top: 20px;
+            h3{
+                height: 50px;
+                line-height: 50px;
+                font-size: 24px;
+            }           
+        }
+    }
+    .note {
+        margin: 30px 0;
+    }
+    .response {
+        &__img {
+            background: url('https://s3.us-east-2.amazonaws.com/ue1stgas3pases001/Test/Innovacion/campains/mpromotion.png') no-repeat;
+            max-width: 280px;
+            height: 120px;
+        }
+        &__card {
+            background: #f7f7f7;
+            max-width: 280px;
+            padding: 38px 24px;
+            margin-bottom: 28px;
+            p {
+                font-size: 14px;
+            }
+            a {
+                display: inline-block;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                font-weight: 600;
+                text-decoration: none;
+            }
+            a:hover {
+                color:#ffffff;
+                background: #6a9803;                
+            }
+        }
+        &__copy {
+            font-size: 18px;
+            font-weight: 900;
+            margin: 16px 0 6px;
+        }
+    }
+    .not-successful {
+        margin-top:40px;
+    }
+}
+@media screen and (min-width:426px){
+    #pageForm,#confirmation {
+        .left-content, .right-content {
+            margin-left: column-width(5);
+        }        
+    } 
+}
+@media screen and (min-width:769px){
+    header {
+        .logo {
+            margin-left: column-width(2);
+        }
+    }
+    #pageForm,#confirmation {
+        .left-content {
+            margin: 0 column-width(2);
+        }
+        .right-content {
+            margin: 0;
+        }
+    }
+    #pageForm {
+        .container {
+            margin-top: 46px;
+            margin-bottom: 30px;
+        }
+        .product {
+            margin-bottom: 31px;
+            max-width: 519px;
+            height: 456px;
+            &__img {
+                background: url('../img/260319-banner-promo-dk.png') no-repeat;
+                background-position: top;
+                height: 374px;
+                padding: 45px 54px;
+            }
+            &__copy {
+                margin-top: 12px;
+                font-size: 32px;
+                font-weight: 900;
+            }
+            &__name {
+                padding-top: 0;
+            }
+        }
+        .benefits {
+            max-width: 519px;
+            padding: 22px 55px;
+            .owl-theme .owl-dots {
+                text-align: left;
+            }
+        }
+        .form {
+            padding: 45px 60px;
+            border: 1px solid #dddee2;
+            border-radius: 2px;
+            max-width: 480px;
+            &__title {
+                margin: 0 0 20px;
+                font-size: 26px;
+            }
+        }
+    }
+    #confirmation {
+        .container {
+            margin-top:75px;
+        }
+        .left-content .no-success {
+            margin-top: 0;
+        }
+        .confirmation {
+            &__name {
+                font-size: 12px;
+                font-weight: 900;
+            }
+            &__copy {
+                font-size: 32px;
+                font-weight: 900;
+                margin: 32px 0 3px;
+            }
+            &__code {
+                margin: 20px 0 0;
+                p {
+                    height: 50px;
+                    line-height: 50px;
+                    margin-bottom: 0;
+                }
+                h4 {                
+                    background-color: #ededef;
+                    max-width: 77.4193548387%;
+                    height: 50px;
+                    line-height: 50px;
+                    text-align: center;
+                    font-size: 17px;
+                    font-weight: 600;
+                }
+            }
+        }
+        .response {
+            &__img {
+                background: url('https://s3.us-east-2.amazonaws.com/ue1stgas3pases001/Test/Innovacion/campains/dpromotion.png') no-repeat;
+                padding: 0;
+                max-width: 280px;
+                height: 308px;
+            }
+            &__card {
+                height: 308px;
+                padding: 48px 40px;
+                p {
+                    font-size: 16px;
+                    text-align: left;
+                }
+            }
+            &__copy {
+                font-size: 22px;
+                font-weight: 900;
+                margin-top: 16px;
+            }
+        }
+        .not-successful {
+            margin-top: 0;
+        }
+    }
+}
